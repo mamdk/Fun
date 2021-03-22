@@ -1,0 +1,96 @@
+:root {
+	--color: #101010;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: var(--color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	min-width: 300px;
+	height: 100px;
+	background-color: var(--color);
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px #050505;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.part {
+	height: 100px;
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.part:nth-child(1)::after , .part:nth-child(2)::after{
+	content: "";
+	width: 1px;
+	height: 50%;
+	background-color: #aaaaaa;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
+.top,
+.down {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	color: #aaaaaa;
+	z-index: 1;
+}
+
+.top {
+	top: 0;
+}
+
+.down {
+	bottom: 0;
+}
+
+
+.ps{
+	width: 100%;
+	height: 100%;
+}
+
+.items {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #aaaaaa;
+}
+
+
+/* result btn */
+/* 
+#result{
+	padding: 20px;
+	background: none;
+	border: 0;
+	color: crimson;
+	cursor: pointer;
+} */
